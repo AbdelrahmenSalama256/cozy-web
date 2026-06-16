@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>إنشاء حساب جديد</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="login-page">
+      <div class="custom-container container">
+        <div class="auth-logo mt-4">
+          <img src="./assets/img/logo.png" alt="Logo" />
+        </div>
+        <hr />
+        <div class="auth-container">
+          <div class="auth-illustration">
+            <img src="assets/img/login.svg" alt="Login Illustration" />
+          </div>
+          <div class="auth-text">
+            <h1>هيا بنا نبدأ!</h1>
+            <p>من فضلك قم بملء البيانات بالأسفل لإنشاء حسابك</p>
+          </div>
+
+          <form id="loginForm">
+            <!-- الاسم بالكامل -->
+            <div class="mb-3">
+              <label for="name" class="form-label">الاسم بالكامل</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="الاسم ثنائي أو ثلاثي"
+                required
+              />
+            </div>
+
+            <!-- رقم الهاتف -->
+            <div class="mb-3">
+              <label for="phone" class="form-label">رقم الهاتف</label>
+              <input
+                type="tel"
+                class="form-control"
+                id="phone"
+                placeholder="رقم الهاتف"
+                required
+              />
+            </div>
+
+            <!-- المحافظة (Dropdown) -->
+            <div class="mb-3">
+              <label for="governorate" class="form-label">المحافظة</label>
+              <select class="form-control" id="governorate" required>
+                <option value="" disabled selected>اختر المحافظة</option>
+                <option value="cairo">القاهرة</option>
+                <option value="alexandria">الإسكندرية</option>
+                <option value="giza">الجيزة</option>
+                <option value="sharqia">الشرقية</option>
+                <option value="dakahlia">الدقهلية</option>
+                <!-- يمكنك إضافة المزيد من المحافظات -->
+              </select>
+            </div>
+
+            <!-- العنوان -->
+            <div class="mb-3">
+              <label for="address" class="form-label">العنوان</label>
+              <input
+                type="text"
+                class="form-control"
+                id="address"
+                placeholder="العنوان بالتفصيل"
+                required
+              />
+            </div>
+
+            <!-- كلمة المرور -->
+            <div class="mb-3 position-relative">
+              <label for="password" class="form-label">كلمة المرور</label>
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                placeholder="كلمة المرور"
+                required
+              />
+              <span
+                class="password-toggle"
+                onclick="togglePassword('password')"
+              >
+                <i class="far fa-eye"></i>
+              </span>
+            </div>
+
+            <!-- تأكيد كلمة المرور -->
+            <div class="mb-3 position-relative">
+              <label for="confirmPassword" class="form-label"
+                >تأكيد كلمة المرور</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="confirmPassword"
+                placeholder="تأكيد كلمة المرور"
+                required
+              />
+              <span
+                class="password-toggle"
+                onclick="togglePassword('confirmPassword')"
+              >
+                <i class="far fa-eye"></i>
+              </span>
+            </div>
+
+            <!-- زر إنشاء الحساب -->
+            <button type="submit" class="btn btn-primary w-100 mb-3">
+              إنشاء حساب جديد
+            </button>
+
+            <!-- رابط تسجيل الدخول -->
+            <div class="auth-footer">
+              <span>لديك حساب؟</span>
+              <a href="login.html" class="register-link">سجل الدخول</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // دالة لإظهار أو إخفاء كلمة المرور
+      function togglePassword(fieldId) {
+        const passwordInput = document.getElementById(fieldId);
+        const toggleIcon = passwordInput
+          .closest(".position-relative")
+          .querySelector(".password-toggle i");
+
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+          toggleIcon.classList.remove("fa-eye");
+          toggleIcon.classList.add("fa-eye-slash");
+        } else {
+          passwordInput.type = "password";
+          toggleIcon.classList.remove("fa-eye-slash");
+          toggleIcon.classList.add("fa-eye");
+        }
+      }
+
+      // دالة للتحقق من تطابق كلمة المرور
+      function validatePassword() {
+        const password = document.getElementById("password").value;
+        const confirmPassword =
+          document.getElementById("confirmPassword").value;
+
+        if (password !== confirmPassword) {
+          alert("كلمة المرور غير متطابقة!");
+          return false;
+        }
+        return true;
+      }
+
+      // إضافة حدث submit للفورم
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          if (!validatePassword()) {
+            return;
+          }
+
+          // هنا يمكنك إضافة منطق إرسال البيانات إلى الخادم
+          console.log("تم إنشاء الحساب بنجاح!");
+        });
+    </script>
+  </body>
+</html>

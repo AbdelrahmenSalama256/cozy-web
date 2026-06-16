@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cozy Home</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="header-area">
+      <div class="desktop-nav d-none d-lg-block">
+        <div class="header-menu">
+          <div class="custom-container container-fluid">
+            <div class="row align-items-center">
+              <div
+                class="col-lg-3 col-xxl-3 d-flex align-items-center justify-content-between"
+              >
+                <div class="header-logo-contact">
+                  <div class="desktop-logo">
+                    <a href="./index.html">
+                      <img src="./assets/img/logo.png" alt="Logo" />
+                    </a>
+                  </div>
+                </div>
+                <div class="header-search">
+                  <form
+                    id="searchForm"
+                    class="search-form"
+                    action=""
+                    method="GET"
+                  >
+                    <input
+                      type="text"
+                      class="search-type"
+                      id="prod_name"
+                      name="search"
+                      placeholder="البحث عن منتجات..."
+                      value=""
+                      autocomplete="on"
+                    />
+                    <button><i class="fas fa-search"></i></button>
+                  </form>
+                </div>
+              </div>
+              <div class="col-lg-9 position-static">
+                <div class="header-horizontal-menu">
+                  <ul class="menu-content">
+                    <li class="active"><a href="./index.html">الرئيسية</a></li>
+                    <li class="has-submenu">
+                      <a href="#"
+                        >الأقسام <i class="fas fa-chevron-down"></i
+                      ></a>
+                      <ul class="sub-menu">
+                        <li><a href="category.html">غرف النوم</a></li>
+                        <li><a href="category.html">الصالونات</a></li>
+                        <li><a href="category.html">طاولات الطعام</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="about.html">عن المتجر</a></li>
+                    <li><a href="contact.html">تواصل معنا</a></li>
+                  </ul>
+                  <div
+                    class="header-nav-right d-flex align-items-center justify-content-between"
+                  >
+                    <div class="cart-btn">
+                      <a href="cart.html" class="btn deal-button cart-button">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>سلة التسوق</span>
+                      </a>
+                    </div>
+                    <div class="profile-dropdown">
+                      <div
+                        class="profile-trigger"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <img
+                          src="assets/img/profile.png"
+                          alt="Profile"
+                          class="profile-avatar"
+                        />
+                        <span class="profile-name">مصطفى عبد الرحيم</span>
+                        <i class="fas fa-chevron-down"></i>
+                      </div>
+                      <div class="dropdown-menu">
+                        <a href="profile.html" class="menu-item">
+                          <i class="fas fa-user"></i>
+                          <span>الحساب</span>
+                        </a>
+                        <a href="#" class="menu-item">
+                          <i class="fas fa-box"></i>
+                          <span>الطلبات</span>
+                        </a>
+                        <a href="wishlist.html" class="menu-item">
+                          <i class="fas fa-heart"></i>
+                          <span>المفضلة</span>
+                        </a>
+                        <a href="#" class="menu-item logout">
+                          <i class="fas fa-sign-out-alt"></i>
+                          <span>تسجيل خروج</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Breadcrumb Section -->
+    <section class="breadcrumb-area">
+      <div class="custom-container container">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">الرئيسية</a></li>
+            <li class="breadcrumb-item"><a href="#">الCozy Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              غرف النوم
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+      <div class="custom-container container">
+        <div class="row">
+          <div class="col-lg-9">
+            <div class="section-header">
+              <h2 class="section-title">
+                غرف النوم <span class="item-count">(48) منتج</span>
+              </h2>
+              <div class="sorting-options mb-4">
+                <select id="sort-by" class="form-select">
+                  <option value="default">الترتيب حسب</option>
+                  <option value="price_asc">السعر: من الأقل إلى الأعلى</option>
+                  <option value="price_desc">السعر: من الأعلى إلى الأقل</option>
+                  <option value="popularity">الأكثر مبيعاً</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row">
+              <!-- Product Card 1 -->
+              <div class="col-lg-4 col-md-6 mb-4">
+                <a href="product-details.html" class="product-card-link">
+                  <div class="product-card">
+                    <div class="product-badge">وفر 15%</div>
+                    <div class="wishlist-btn"><i class="far fa-heart"></i></div>
+                    <div class="product-image">
+                      <img
+                        src="./assets/img/furniture/bedroom1.jpg"
+                        alt="غرفة نوم كلاسيكية"
+                      />
+                    </div>
+                    <div class="product-details">
+                      <h3 class="product-title">
+                        غرفة نوم كلاسيكية من الخشب الطبيعي
+                      </h3>
+                      <div class="product-price">
+                        <span class="current-price">2,500 ريال</span>
+                        <span class="original-price">2,950 ريال</span>
+                      </div>
+                      <div class="product-meta">
+                        <span
+                          ><i class="fas fa-ruler-combined"></i> 180x200
+                          سم</span
+                        >
+                        <span><i class="fas fa-palette"></i> بني</span>
+                      </div>
+                      <button class="add-to-cart">
+                        أضف للسلة <i class="fas fa-shopping-cart"></i>
+                      </button>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Product Card 2 -->
+              <div class="col-lg-4 col-md-6 mb-4">
+                <a href="product-details.html" class="product-card-link">
+                  <div class="product-card">
+                    <div class="product-badge">جديد</div>
+                    <div class="wishlist-btn"><i class="far fa-heart"></i></div>
+                    <div class="product-image">
+                      <img
+                        src="./assets/img/furniture/bedroom2.jpg"
+                        alt="غرفة نوم مودرن"
+                      />
+                    </div>
+                    <div class="product-details">
+                      <h3 class="product-title">
+                        غرفة نوم مودرن باللون الأبيض
+                      </h3>
+                      <div class="product-price">
+                        <span class="current-price">3,200 ريال</span>
+                      </div>
+                      <div class="product-meta">
+                        <span
+                          ><i class="fas fa-ruler-combined"></i> 160x200
+                          سم</span
+                        >
+                        <span><i class="fas fa-palette"></i> أبيض</span>
+                      </div>
+                      <button class="add-to-cart">
+                        أضف للسلة <i class="fas fa-shopping-cart"></i>
+                      </button>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Product Card 3 -->
+              <div class="col-lg-4 col-md-6 mb-4">
+                <a href="product-details.html" class="product-card-link">
+                  <div class="product-card">
+                    <div class="wishlist-btn"><i class="far fa-heart"></i></div>
+                    <div class="product-image">
+                      <img
+                        src="./assets/img/furniture/bedroom3.jpg"
+                        alt="غرفة نوم فاخرة"
+                      />
+                    </div>
+                    <div class="product-details">
+                      <h3 class="product-title">
+                        غرفة نوم فاخرة من الجلد الصناعي
+                      </h3>
+                      <div class="product-price">
+                        <span class="current-price">4,750 ريال</span>
+                      </div>
+                      <div class="product-meta">
+                        <span
+                          ><i class="fas fa-ruler-combined"></i> 200x220
+                          سم</span
+                        >
+                        <span><i class="fas fa-palette"></i> أسود</span>
+                      </div>
+                      <button class="add-to-cart">
+                        أضف للسلة <i class="fas fa-shopping-cart"></i>
+                      </button>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Product Card 4 -->
+              <div class="col-lg-4 col-md-6 mb-4">
+                <a href="product-details.html" class="product-card-link">
+                  <div class="product-card">
+                    <div class="product-badge">عرض خاص</div>
+                    <div class="wishlist-btn"><i class="far fa-heart"></i></div>
+                    <div class="product-image">
+                      <img
+                        src="./assets/img/furniture/bedroom4.jpg"
+                        alt="غرفة نوم بسيطة"
+                      />
+                    </div>
+                    <div class="product-details">
+                      <h3 class="product-title">
+                        غرفة نوم بسيطة من الخشب الصناعي
+                      </h3>
+                      <div class="product-price">
+                        <span class="current-price">1,850 ريال</span>
+                        <span class="original-price">2,200 ريال</span>
+                      </div>
+                      <div class="product-meta">
+                        <span
+                          ><i class="fas fa-ruler-combined"></i> 150x200
+                          سم</span
+                        >
+                        <span><i class="fas fa-palette"></i> بني فاتح</span>
+                      </div>
+                      <button class="add-to-cart">
+                        أضف للسلة <i class="fas fa-shopping-cart"></i>
+                      </button>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Product Card 5 -->
+              <div class="col-lg-4 col-md-6 mb-4">
+                <a href="product-details.html" class="product-card-link">
+                  <div class="product-card">
+                    <div class="wishlist-btn"><i class="far fa-heart"></i></div>
+                    <div class="product-image">
+                      <img
+                        src="./assets/img/furniture/bedroom5.jpg"
+                        alt="غرفة نوم للأطفال"
+                      />
+                    </div>
+                    <div class="product-details">
+                      <h3 class="product-title">
+                        غرفة نوم للأطفال باللون الأزرق
+                      </h3>
+                      <div class="product-price">
+                        <span class="current-price">2,100 ريال</span>
+                      </div>
+                      <div class="product-meta">
+                        <span
+                          ><i class="fas fa-ruler-combined"></i> 120x200
+                          سم</span
+                        >
+                        <span><i class="fas fa-palette"></i> أزرق</span>
+                      </div>
+                      <button class="add-to-cart">
+                        أضف للسلة <i class="fas fa-shopping-cart"></i>
+                      </button>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Product Card 6 -->
+              <div class="col-lg-4 col-md-6 mb-4">
+                <a href="product-details.html" class="product-card-link">
+                  <div class="product-card">
+                    <div class="product-badge">الأكثر مبيعاً</div>
+                    <div class="wishlist-btn"><i class="far fa-heart"></i></div>
+                    <div class="product-image">
+                      <img
+                        src="./assets/img/furniture/bedroom6.jpg"
+                        alt="غرفة نوم ملكية"
+                      />
+                    </div>
+                    <div class="product-details">
+                      <h3 class="product-title">
+                        غرفة نوم ملكية من الخشب الصلب
+                      </h3>
+                      <div class="product-price">
+                        <span class="current-price">5,500 ريال</span>
+                      </div>
+                      <div class="product-meta">
+                        <span
+                          ><i class="fas fa-ruler-combined"></i> 200x220
+                          سم</span
+                        >
+                        <span><i class="fas fa-palette"></i> كرزي</span>
+                      </div>
+                      <button class="add-to-cart">
+                        أضف للسلة <i class="fas fa-shopping-cart"></i>
+                      </button>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Pagination -->
+            <nav aria-label="Page navigation">
+              <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                  <a
+                    class="page-link"
+                    href="#"
+                    tabindex="-1"
+                    aria-disabled="true"
+                    >التالي</a
+                  >
+                </li>
+                <li class="page-item active">
+                  <a class="page-link" href="#">1</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">السابق</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- Filters Sidebar -->
+          <div class="col-lg-3">
+            <div class="filter-sidebar">
+              <div class="section-header">
+                <h2 class="section-title">تصفية النتائج</h2>
+                <a href="#" class="view-all" id="clear-all">
+                  مسح الكل <i class="fas fa-undo"></i>
+                </a>
+              </div>
+
+              <!-- Price Filter -->
+              <div class="filter-group">
+                <div class="filter-header">
+                  <span>السعر</span>
+                  <button class="toggle-btn active">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                </div>
+                <div class="filter-content show">
+                  <div class="price-slider">
+                    <div id="price-range"></div>
+                    <div class="price-inputs">
+                      <input type="text" id="min-price" readonly />
+                      <span>-</span>
+                      <input type="text" id="max-price" readonly />
+                    </div>
+                    <button class="apply-btn">تطبيق</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Categories Filter -->
+              <div class="filter-group">
+                <div class="filter-header">
+                  <span>الفئات</span>
+                  <button class="toggle-btn active">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                </div>
+                <div class="filter-content show">
+                  <div class="filter-item">
+                    <label class="custom-checkbox">
+                      <input type="checkbox" checked />
+                      <span class="checkmark"></span>
+                      <span class="label-text">غرف النوم</span>
+                    </label>
+                  </div>
+                  <div class="filter-item">
+                    <label class="custom-checkbox">
+                      <input type="checkbox" />
+                      <span class="checkmark"></span>
+                      <span class="label-text">الصالونات</span>
+                    </label>
+                  </div>
+                  <div class="filter-item">
+                    <label class="custom-checkbox">
+                      <input type="checkbox" />
+                      <span class="checkmark"></span>
+                      <span class="label-text">طاولات الطعام</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Material Filter -->
+              <div class="filter-group">
+                <div class="filter-header">
+                  <span>المادة</span>
+                  <button class="toggle-btn">
+                    <i class="fas fa-plus"></i>
+                  </button>
+                </div>
+                <div class="filter-content">
+                  <div class="filter-item">
+                    <label class="custom-checkbox">
+                      <input type="checkbox" />
+                      <span class="checkmark"></span>
+                      <span class="label-text">خشب طبيعي</span>
+                    </label>
+                  </div>
+                  <div class="filter-item">
+                    <label class="custom-checkbox">
+                      <input type="checkbox" />
+                      <span class="checkmark"></span>
+                      <span class="label-text">خشب صناعي</span>
+                    </label>
+                  </div>
+                  <div class="filter-item">
+                    <label class="custom-checkbox">
+                      <input type="checkbox" />
+                      <span class="checkmark"></span>
+                      <span class="label-text">جلد صناعي</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Color Filter -->
+              <div class="filter-group">
+                <div class="filter-header">
+                  <span>اللون</span>
+                  <button class="toggle-btn">
+                    <i class="fas fa-plus"></i>
+                  </button>
+                </div>
+                <div class="filter-content">
+                  <div class="color-options">
+                    <div
+                      class="color-option"
+                      data-color="brown"
+                      style="background-color: #8b4513"
+                    ></div>
+                    <div
+                      class="color-option"
+                      data-color="white"
+                      style="background-color: #ffffff; border: 1px solid #ddd"
+                    ></div>
+                    <div
+                      class="color-option"
+                      data-color="black"
+                      style="background-color: #000000"
+                    ></div>
+                    <div
+                      class="color-option"
+                      data-color="blue"
+                      style="background-color: #1e90ff"
+                    ></div>
+                    <div
+                      class="color-option"
+                      data-color="cherry"
+                      style="background-color: #800000"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Size Filter -->
+              <div class="filter-group">
+                <div class="filter-header">
+                  <span>المقاس</span>
+                  <button class="toggle-btn">
+                    <i class="fas fa-plus"></i>
+                  </button>
+                </div>
+                <div class="filter-content">
+                  <div class="filter-item">
+                    <label class="custom-checkbox">
+                      <input type="checkbox" />
+                      <span class="checkmark"></span>
+                      <span class="label-text">120x200 سم</span>
+                    </label>
+                  </div>
+                  <div class="filter-item">
+                    <label class="custom-checkbox">
+                      <input type="checkbox" />
+                      <span class="checkmark"></span>
+                      <span class="label-text">150x200 سم</span>
+                    </label>
+                  </div>
+                  <div class="filter-item">
+                    <label class="custom-checkbox">
+                      <input type="checkbox" />
+                      <span class="checkmark"></span>
+                      <span class="label-text">180x200 سم</span>
+                    </label>
+                  </div>
+                  <div class="filter-item">
+                    <label class="custom-checkbox">
+                      <input type="checkbox" />
+                      <span class="checkmark"></span>
+                      <span class="label-text">200x220 سم</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+      <div class="custom-container container">
+        <div class="row">
+          <!-- Newsletter Section -->
+          <div class="col-lg-3">
+            <div class="footer-section">
+              <div class="footer-logo mb-4">
+                <img
+                  src="./assets/img/logo.png"
+                  alt="متجر الأثاث"
+                  class="img-fluid"
+                />
+              </div>
+              <div class="social-links mb-4">
+                <a href="#" class="social-link"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" class="social-link"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" class="social-link"
+                  ><i class="fab fa-whatsapp"></i
+                ></a>
+                <a href="#" class="social-link"
+                  ><i class="fab fa-snapchat-ghost"></i
+                ></a>
+              </div>
+              <h4 class="newsletter-title">اشترك لتصلك أحدث عروض الأثاث</h4>
+              <form class="newsletter-form">
+                <div class="input-group">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="البريد الإلكتروني"
+                  />
+                  <button type="submit" class="btn btn-submit">
+                    <i class="fas fa-arrow-left"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-lg-3">
+            <div class="footer-section">
+              <h3 class="footer-title">روابط سريعة</h3>
+              <ul class="footer-links">
+                <li><a href="about.html">عن المتجر</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+                <li><a href="privacy.html">سياسة الخصوصية</a></li>
+                <li><a href="terms.html">الشروط والأحكام</a></li>
+                <li><a href="faq.html">الأسئلة الشائعة</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Customer Service -->
+          <div class="col-lg-3">
+            <div class="footer-section">
+              <h3 class="footer-title">خدمة العملاء</h3>
+              <ul class="footer-links">
+                <li><a href="track-order.html">تتبع الطلب</a></li>
+                <li><a href="returns.html">سياسة الإرجاع</a></li>
+                <li><a href="shipping.html">الشحن والتوصيل</a></li>
+                <li><a href="size-guide.html">دليل المقاسات</a></li>
+                <li><a href="payment-options.html">خيارات الدفع</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="col-lg-3">
+            <div class="footer-section">
+              <h3 class="footer-title">معلومات الاتصال</h3>
+              <div class="contact-info">
+                <p>
+                  <i class="fas fa-map-marker-alt"></i> الرياض، المملكة العربية
+                  السعودية
+                </p>
+                <p><i class="fas fa-phone"></i> +966 12 345 6789</p>
+                <p><i class="fas fa-envelope"></i> info@furniture-store.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+          <div class="row">
+            <div class="col-12 text-center">
+              <p class="copyright">
+                © 2023 جميع الحقوق محفوظة - متجر الCozy Home
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Initialize price range slider
+        $("#price-range").slider({
+          range: true,
+          min: 0,
+          max: 10000,
+          values: [0, 5000],
+          slide: function (event, ui) {
+            $("#min-price").val(ui.values[0] + " ريال");
+            $("#max-price").val(ui.values[1] + " ريال");
+          },
+        });
+
+        // Set initial values
+        $("#min-price").val($("#price-range").slider("values", 0) + " ريال");
+        $("#max-price").val($("#price-range").slider("values", 1) + " ريال");
+
+        // Toggle filter sections
+        $(".filter-header").click(function () {
+          const content = $(this).next(".filter-content");
+          const icon = $(this).find(".toggle-btn i");
+
+          content.slideToggle();
+
+          if (icon.hasClass("fa-plus")) {
+            icon.removeClass("fa-plus").addClass("fa-minus");
+          } else {
+            icon.removeClass("fa-minus").addClass("fa-plus");
+          }
+        });
+
+        // Color selection
+        $(".color-option").click(function () {
+          $(this).toggleClass("selected");
+        });
+
+        // Clear all filters
+        $("#clear-all").click(function (e) {
+          e.preventDefault();
+          $(".custom-checkbox input").prop("checked", false);
+          $(".color-option").removeClass("selected");
+          $("#price-range").slider("values", [0, 5000]);
+          $("#min-price").val("0 ريال");
+          $("#max-price").val("5000 ريال");
+        });
+      });
+    </script>
+  </body>
+</html>

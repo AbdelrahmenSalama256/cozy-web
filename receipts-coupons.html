@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Al Soltan" />
+    <link rel="icon" type="image/x-icon" href="./assets/img/logo.jpg" />
+    <title>Cozy Home</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/slider.css" />
+  </head>
+  <body>
+    <div id="preloader">
+      <img src="./assets/img/logo.png" alt="Logo" class="preloader-logo" />
+    </div>
+    <header class="header-area">
+      <div class="desktop-nav d-none d-lg-block">
+        <div class="header-menu">
+          <div class="custom-container container-fluid custom-container">
+            <div class="row align-items-center">
+              <div
+                class="col-lg-3 col-xxl-3 d-flex align-items-center justify-content-between"
+              >
+                <div class="header-logo-contact">
+                  <div class="desktop-logo">
+                    <a href="./index.html">
+                      <img src="./assets/img/logo.png" alt="Logo" />
+                    </a>
+                  </div>
+                </div>
+                <div class="header-search">
+                  <form
+                    id="searchForm"
+                    class="search-form"
+                    action=""
+                    method="GET"
+                  >
+                    <input
+                      type="text"
+                      class="search-type"
+                      id="prod_name"
+                      name="search"
+                      placeholder="البحث عن منتجات..."
+                      value=""
+                      autocomplete="on"
+                    />
+                    <button><i class="fas fa-search"></i></button>
+                  </form>
+                  <div class="autocomplete search-suggestion">
+                    <div
+                      id="myInputautocomplete-list"
+                      class="autocomplete-items"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-9 position-static">
+                <div class="header-horizontal-menu">
+                  <ul class="menu-content">
+                    <li class="active"><a href="./index.html">الرئيسية</a></li>
+                    <li class="has-submenu">
+                      <a href="#"
+                        >الأقسام <i class="fas fa-chevron-down"></i
+                      ></a>
+                      <!-- Submenu -->
+                      <ul class="sub-menu">
+                        <li><a href="category.html">الإلكترونيات</a></li>
+                        <li><a href="category.html">ملابس</a></li>
+                        <li><a href="category.html">الأجهزة المنزلية</a></li>
+                      </ul>
+                    </li>
+
+                    <li><a href="about.html">عن كوزي هوم</a></li>
+
+                    <li><a href="contact.html">تواصل معنا </a></li>
+                  </ul>
+                  <div
+                    class="header-nav-right d-flex align-items-center justify-content-between"
+                  >
+                    <div class="cart-btn">
+                      <a href="cart.html" class="btn deal-button cart-button">
+                        <i class="fas fa-shopping-cart"></i>
+
+                        <span
+                          >سلة التسوق
+
+                          <div class="item-count">3</div>
+                        </span>
+                      </a>
+                    </div>
+                    <!-- <div class="loign-btn mx-2">
+                        <a class="btn deal-button theme-btn" href="login.html">
+                          <i class="fas fa-user"></i>
+  
+                          <span>تسجيل الدخول</span>
+                        </a>
+                      </div> -->
+                    <div class="profile-dropdown">
+                      <div
+                        class="profile-trigger"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <img
+                          src="assets/img/profile.png"
+                          alt="Profile"
+                          class="profile-avatar"
+                        />
+                        <span class="profile-name">مصطفى عبد الرحيم</span>
+                        <i class="fas fa-chevron-down"></i>
+                      </div>
+
+                      <div class="dropdown-menu">
+                        <a href="profile.html" class="menu-item">
+                          <i class="fas fa-user"></i>
+                          <span>الحساب</span>
+                        </a>
+                        <a href="#" class="menu-item">
+                          <i class="fas fa-box"></i>
+                          <span>الطلبات</span>
+                        </a>
+                        <a href="wishlist.html" class="menu-item">
+                          <i class="fas fa-heart"></i>
+                          <span>المفضلة</span>
+                        </a>
+                        <a href="receipts-coupons.html" class="menu-item">
+                          <i class="fas fa-ticket"></i>
+                          <span>قسائم الشراء و الكوبونات</span>
+                        </a>
+                        <a href="#" class="menu-item logout">
+                          <i class="fas fa-sign-out-alt"></i>
+                          <span>تسجيل خروج</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- header horizontal menu -->
+              </div>
+            </div>
+            <!-- row -->
+          </div>
+          <!-- container -->
+        </div>
+        <!-- header menu -->
+      </div>
+      <!-- desktop nav -->
+
+      <div class="mobile-nav d-lg-none">
+        <div class="custom-container container-fluid">
+          <div class="mobile-nav-top">
+            <div class="row align-items-center">
+              <div class="col-sm-4 col-3">
+                <div class="mobile-toggle">
+                  <button
+                    class="toggle"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasMobile"
+                  >
+                    <i class="fas fa-bars"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="col-sm-4 col-5">
+                <div class="mobile-logo text-center">
+                  <a href="./index.html">
+                    <img src="./assets/img/logo.png" alt="Logo" />
+                  </a>
+                </div>
+                <!-- mobile logo -->
+              </div>
+            </div>
+            <!-- row -->
+          </div>
+          <!-- mobile nav top -->
+        </div>
+        <!-- container -->
+      </div>
+      <!-- mobile nav -->
+
+      <div class="offcanvas offcanvas-start" id="offcanvasMobile">
+        <div
+          class="header-nav-right d-flex align-items-center justify-content-between"
+        >
+          <div class="cart-btn">
+            <a href="cart.html" class="btn deal-button cart-button">
+              <i class="fas fa-shopping-cart"></i>
+
+              <span
+                >سلة التسوق
+
+                <div class="item-count">3</div>
+              </span>
+            </a>
+          </div>
+          <!-- <div class="loign-btn mx-2">
+            <a class="btn deal-button theme-btn" href="login.html">
+              <i class="fas fa-user"></i>
+  
+              <span>تسجيل الدخول</span>
+            </a>
+          </div> -->
+          <div class="profile-dropdown">
+            <div
+              class="profile-trigger"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                src="assets/img/profile.png"
+                alt="Profile"
+                class="profile-avatar"
+              />
+              <span class="profile-name">مصطفى عبد الرحيم</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+
+            <div class="dropdown-menu">
+              <a href="#" class="menu-item">
+                <i class="fas fa-user"></i>
+                <span>الحساب</span>
+              </a>
+              <a href="#" class="menu-item">
+                <i class="fas fa-box"></i>
+                <span>الطلبات</span>
+              </a>
+              <a href="#" class="menu-item">
+                <i class="fas fa-heart"></i>
+                <span>المفضلة</span>
+              </a>
+              <a href="#" class="menu-item">
+                <i class="fas fa-ticket"></i>
+                <span>قسائم الشراء و الكوبونات</span>
+              </a>
+              <a href="#" class="menu-item logout">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>تسجيل خروج</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="header-search">
+          <form id="searchForm" class="search-form" action="" method="GET">
+            <input
+              type="text"
+              class="search-type"
+              id="prod_name"
+              name="search"
+              placeholder="البحث عن منتجات..."
+              value=""
+              autocomplete="on"
+            />
+            <button><i class="fas fa-search"></i></button>
+          </form>
+          <div class="autocomplete search-suggestion">
+            <div id="myInputautocomplete-list" class="autocomplete-items"></div>
+          </div>
+        </div>
+        <div class="mobile-main-menu">
+          <ul class="menu-content" id="mobileMenuContent"></ul>
+        </div>
+      </div>
+    </header>
+    <!-- BreadCrumd Section -->
+    <section class="breadcrumb-area">
+      <div class="custom-container container">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">الرئيسية</a></li>
+            <li class="breadcrumb-item active" aria-current="page">الحساب</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <section class="copoun-section">
+      <div class="coupons-container custom-container">
+        <div class="section-tabs">
+          <div class="tab-buttons">
+            <button class="tab-btn active" data-tab="active-coupons">
+              <i class="fas fa-ticket-alt"></i>
+              <span>الكوبونات المتاحة</span>
+            </button>
+            <button class="tab-btn" data-tab="used-coupons">
+              <i class="fas fa-check-circle"></i>
+              <span>الكوبونات المستخدمة</span>
+            </button>
+            <button class="tab-btn" data-tab="expired-coupons">
+              <i class="fas fa-times-circle"></i>
+              <span>الكوبونات المنتهية</span>
+            </button>
+            <button class="tab-btn" data-tab="receipts">
+              <i class="fas fa-receipt"></i>
+              <span>الإيصالات</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Active Coupons Tab -->
+        <div id="active-coupons" class="tab-content active">
+          <!-- Coupon 1 -->
+          <div class="coupon-card">
+            <div class="coupon-header">
+              <span class="coupon-type">خصم نسبي</span>
+              <span class="coupon-status status-active">متاح</span>
+            </div>
+            <h3 class="coupon-title">خصم 20% على جميع المنتجات</h3>
+            <p class="coupon-description">
+              احصل على خصم 20% على جميع منتجات الحلويات العربية. صالح للاستخدام
+              مرة واحدة فقط.
+            </p>
+            <div class="coupon-code">
+              <div class="code-text">SAVE20</div>
+              <button class="copy-btn" onclick="copyCode('SAVE20')">
+                <i class="fas fa-copy"></i>
+              </button>
+            </div>
+            <div class="coupon-details">
+              <div class="detail-item">
+                <div class="detail-label">قيمة الخصم</div>
+                <div class="detail-value">20%</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">الحد الأدنى</div>
+                <div class="detail-value">100 ريال</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">ينتهي في</div>
+                <div class="detail-value">31 ديسمبر</div>
+              </div>
+            </div>
+            <div class="coupon-actions">
+              <button class="btn-primary">استخدم الآن</button>
+              <button class="btn-outline">مشاركة</button>
+            </div>
+          </div>
+
+          <!-- Coupon 2 -->
+          <div class="coupon-card">
+            <div class="coupon-header">
+              <span class="coupon-type">خصم ثابت</span>
+              <span class="coupon-status status-active">متاح</span>
+            </div>
+            <h3 class="coupon-title">خصم 50 ريال على طلبك القادم</h3>
+            <p class="coupon-description">
+              خصم فوري بقيمة 50 ريال على طلبك القادم. مناسب للطلبات الكبيرة.
+            </p>
+            <div class="coupon-code">
+              <div class="code-text">DISCOUNT50</div>
+              <button class="copy-btn" onclick="copyCode('DISCOUNT50')">
+                <i class="fas fa-copy"></i>
+              </button>
+            </div>
+            <div class="coupon-details">
+              <div class="detail-item">
+                <div class="detail-label">قيمة الخصم</div>
+                <div class="detail-value">50 ريال</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">الحد الأدنى</div>
+                <div class="detail-value">200 ريال</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">ينتهي في</div>
+                <div class="detail-value">15 فبراير</div>
+              </div>
+            </div>
+            <div class="coupon-actions">
+              <button class="btn-primary">استخدم الآن</button>
+              <button class="btn-outline">مشاركة</button>
+            </div>
+          </div>
+
+          <!-- Coupon 3 -->
+          <div class="coupon-card">
+            <div class="coupon-header">
+              <span class="coupon-type">توصيل مجاني</span>
+              <span class="coupon-status status-active">متاح</span>
+            </div>
+            <h3 class="coupon-title">توصيل مجاني لجميع الطلبات</h3>
+            <p class="coupon-description">
+              احصل على توصيل مجاني لطلبك بغض النظر عن قيمة الطلب.
+            </p>
+            <div class="coupon-code">
+              <div class="code-text">FREEDELIVERY</div>
+              <button class="copy-btn" onclick="copyCode('FREEDELIVERY')">
+                <i class="fas fa-copy"></i>
+              </button>
+            </div>
+            <div class="coupon-details">
+              <div class="detail-item">
+                <div class="detail-label">قيمة الخصم</div>
+                <div class="detail-value">15 ريال</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">الحد الأدنى</div>
+                <div class="detail-value">لا يوجد</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">ينتهي في</div>
+                <div class="detail-value">28 فبراير</div>
+              </div>
+            </div>
+            <div class="coupon-actions">
+              <button class="btn-primary">استخدم الآن</button>
+              <button class="btn-outline">مشاركة</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Used Coupons Tab -->
+        <div id="used-coupons" class="tab-content">
+          <div class="coupon-card used">
+            <div class="coupon-header">
+              <span class="coupon-type">خصم نسبي</span>
+              <span class="coupon-status status-used">مستخدم</span>
+            </div>
+            <h3 class="coupon-title">خصم 15% على الطلب الأول</h3>
+            <p class="coupon-description">
+              تم استخدام هذا الكوبون في طلب #1234 بتاريخ 15 يناير 2024
+            </p>
+            <div class="coupon-code">
+              <div class="code-text">WELCOME15</div>
+            </div>
+            <div class="coupon-details">
+              <div class="detail-item">
+                <div class="detail-label">تم الاستخدام</div>
+                <div class="detail-value">15 يناير</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">قيمة الوفر</div>
+                <div class="detail-value">18 ريال</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">رقم الطلب</div>
+                <div class="detail-value">#1234</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Expired Coupons Tab -->
+        <div id="expired-coupons" class="tab-content">
+          <div class="coupon-card expired">
+            <div class="coupon-header">
+              <span class="coupon-type">خصم ثابت</span>
+              <span class="coupon-status status-expired">منتهي</span>
+            </div>
+            <h3 class="coupon-title">خصم 30 ريال - عرض رمضان</h3>
+            <p class="coupon-description">
+              انتهت صلاحية هذا الكوبون في 30 أبريل 2024
+            </p>
+            <div class="coupon-code">
+              <div class="code-text">RAMADAN30</div>
+            </div>
+            <div class="coupon-details">
+              <div class="detail-item">
+                <div class="detail-label">انتهى في</div>
+                <div class="detail-value">30 أبريل</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">قيمة الخصم</div>
+                <div class="detail-value">30 ريال</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">الحالة</div>
+                <div class="detail-value">منتهي</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Receipts Tab -->
+        <div id="receipts" class="tab-content">
+          <div class="receipt-card">
+            <div class="receipt-header">
+              <div class="receipt-number">إيصال #R-1234</div>
+              <div class="receipt-date">15 يناير 2025- 2:30 م</div>
+            </div>
+            <div class="receipt-items">
+              <div class="receipt-item">
+                <span>بقلاوة بالفستق الحلبي (x2)</span>
+                <span>90 ريال</span>
+              </div>
+              <div class="receipt-item">
+                <span>معمول بالتمر الفاخر (x1)</span>
+                <span>35 ريال</span>
+              </div>
+              <div class="receipt-item">
+                <span>رسوم التوصيل</span>
+                <span>15 ريال</span>
+              </div>
+              <div class="receipt-item">
+                <span>خصم الكوبون (WELCOME15)</span>
+                <span style="color: var(--deep-red)">-18 ريال</span>
+              </div>
+            </div>
+            <div class="receipt-total">المجموع النهائي: 122 ريال</div>
+          </div>
+
+          <div class="receipt-card">
+            <div class="receipt-header">
+              <div class="receipt-number">إيصال #R-1235</div>
+              <div class="receipt-date">18 يناير 2025- 11:15 ص</div>
+            </div>
+            <div class="receipt-items">
+              <div class="receipt-item">
+                <span>كنافة نابلسية أصلية (x1)</span>
+                <span>50 ريال</span>
+              </div>
+              <div class="receipt-item">
+                <span>رسوم التوصيل</span>
+                <span>15 ريال</span>
+              </div>
+            </div>
+            <div class="receipt-total">المجموع النهائي: 65 ريال</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer Section -->
+    <!-- Footer Section -->
+    <footer class="site-footer">
+      <div class="custom-container container">
+        <div class="row">
+          <!-- Newsletter Section -->
+          <div class="col-lg-3">
+            <div class="footer-section">
+              <div class="footer-logo mb-4">
+                <img
+                  src="./assets/img/logo.png"
+                  alt="متجر الأثاث"
+                  class="img-fluid"
+                />
+              </div>
+              <div class="social-links mb-4">
+                <a href="#" class="social-link"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" class="social-link"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" class="social-link"
+                  ><i class="fab fa-whatsapp"></i
+                ></a>
+                <a href="#" class="social-link"
+                  ><i class="fab fa-snapchat-ghost"></i
+                ></a>
+              </div>
+              <h4 class="newsletter-title">اشترك لتصلك أحدث عروض الأثاث</h4>
+              <form class="newsletter-form">
+                <div class="input-group">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="البريد الإلكتروني"
+                  />
+                  <button type="submit" class="btn btn-submit">
+                    <i class="fas fa-arrow-left"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- Popular Categories Section -->
+          <div class="col-lg-3 mb-4 mb-lg-0">
+            <div class="footer-section">
+              <h3 class="footer-title">أقسام الأثاث</h3>
+              <ul class="footer-links">
+                <li><a href="#">أثاث المعيشة</a></li>
+                <li><a href="#">غرف النوم</a></li>
+                <li><a href="#">طاولات الطعام</a></li>
+                <li><a href="#">أثاث المكاتب</a></li>
+                <li><a href="#">أثاث خارجي</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- Popular Brands Section -->
+          <div class="col-lg-3 mb-4 mb-lg-0">
+            <div class="footer-section">
+              <h3 class="footer-title">ماركات الأثاث</h3>
+              <ul class="footer-links">
+                <li><a href="#">IKEA</a></li>
+                <li><a href="#">Ashley</a></li>
+                <li><a href="#">Ethan Allen</a></li>
+                <li><a href="#">La-Z-Boy</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Download Apps Section -->
+          <div class="col-lg-3 mb-4 mb-lg-0">
+            <div class="footer-section">
+              <h3 class="footer-title">حمل تطبيقنا</h3>
+              <div class="app-buttons">
+                <a href="#" class="app-button google-play">
+                  <img
+                    src="assets/img/icons/googleplay.png"
+                    alt="Google Play"
+                  />
+                  <span>Google Play</span>
+                </a>
+                <a href="#" class="app-button app-store">
+                  <img src="assets/img/icons/app-store.png" alt="App Store" />
+                  <span>App Store</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="footer-bottom">
+          <div class="row">
+            <div class="col-12 text-center">
+              <p class="copyright">
+                © 2025 جميع الحقوق محفوظة - متجر الCozy Home
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js"
+      integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+      integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/3.0.0-rc3/lazysizes.min.js"
+      integrity="sha512-HMnm5Dp1stoEycrUKuMyGDHIudidstU6uRwRgRxPbl2jNxU9xS2B0XLon7xowk3ZitrjNw7WIbQwXroIwY33sw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"
+      integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

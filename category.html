@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Al Soltan" />
+    <link rel="icon" type="image/x-icon" href="./assets/img/logo.jpg" />
+    <title>Cozy Home</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/slider.css" />
+  </head>
+  <body>
+    <div id="preloader">
+      <img src="./assets/img/logo.png" alt="Logo" class="preloader-logo" />
+    </div>
+    <header class="header-area">
+      <div class="desktop-nav d-none d-lg-block">
+        <div class="header-menu">
+          <div class="custom-container container-fluid custom-container">
+            <div class="row align-items-center">
+              <div
+                class="col-lg-3 col-xxl-3 d-flex align-items-center justify-content-between"
+              >
+                <div class="header-logo-contact">
+                  <div class="desktop-logo">
+                    <a href="./index.html">
+                      <img src="./assets/img/logo.png" alt="Logo" />
+                    </a>
+                  </div>
+                </div>
+                <div class="header-search">
+                  <form
+                    id="searchForm"
+                    class="search-form"
+                    action=""
+                    method="GET"
+                  >
+                    <input
+                      type="text"
+                      class="search-type"
+                      id="prod_name"
+                      name="search"
+                      placeholder="البحث عن منتجات..."
+                      value=""
+                      autocomplete="on"
+                    />
+                    <button><i class="fas fa-search"></i></button>
+                  </form>
+                  <div class="autocomplete search-suggestion">
+                    <div
+                      id="myInputautocomplete-list"
+                      class="autocomplete-items"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-9 position-static">
+                <div class="header-horizontal-menu">
+                  <ul class="menu-content">
+                    <li class="active"><a href="./index.html">الرئيسية</a></li>
+                    <li class="has-submenu">
+                      <a href="#"
+                        >الأقسام <i class="fas fa-chevron-down"></i
+                      ></a>
+                      <!-- Submenu -->
+                      <ul class="sub-menu">
+                        <li><a href="category.html">الإلكترونيات</a></li>
+                        <li><a href="category.html">ملابس</a></li>
+                        <li><a href="category.html">الأجهزة المنزلية</a></li>
+                      </ul>
+                    </li>
+
+                    <li><a href="about.html">عن كوزي هوم</a></li>
+
+                    <li><a href="contact.html">تواصل معنا </a></li>
+                  </ul>
+                  <div
+                    class="header-nav-right d-flex align-items-center justify-content-between"
+                  >
+                    <div class="cart-btn">
+                      <a href="cart.html" class="btn deal-button cart-button">
+                        <i class="fas fa-shopping-cart"></i>
+
+                        <span
+                          >سلة التسوق
+
+                          <div class="item-count">3</div>
+                        </span>
+                      </a>
+                    </div>
+                    <!-- <div class="loign-btn mx-2">
+                        <a class="btn deal-button theme-btn" href="login.html">
+                          <i class="fas fa-user"></i>
+  
+                          <span>تسجيل الدخول</span>
+                        </a>
+                      </div> -->
+                    <div class="profile-dropdown">
+                      <div
+                        class="profile-trigger"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <img
+                          src="assets/img/profile.png"
+                          alt="Profile"
+                          class="profile-avatar"
+                        />
+                        <span class="profile-name">مصطفى عبد الرحيم</span>
+                        <i class="fas fa-chevron-down"></i>
+                      </div>
+
+                      <div class="dropdown-menu">
+                        <a href="profile.html" class="menu-item">
+                          <i class="fas fa-user"></i>
+                          <span>الحساب</span>
+                        </a>
+                        <a href="#" class="menu-item">
+                          <i class="fas fa-box"></i>
+                          <span>الطلبات</span>
+                        </a>
+                        <a href="wishlist.html" class="menu-item">
+                          <i class="fas fa-heart"></i>
+                          <span>المفضلة</span>
+                        </a>
+                        <a href="receipts-coupons.html" class="menu-item">
+                          <i class="fas fa-ticket"></i>
+                          <span>قسائم الشراء و الكوبونات</span>
+                        </a>
+                        <a href="#" class="menu-item logout">
+                          <i class="fas fa-sign-out-alt"></i>
+                          <span>تسجيل خروج</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- header horizontal menu -->
+              </div>
+            </div>
+            <!-- row -->
+          </div>
+          <!-- container -->
+        </div>
+        <!-- header menu -->
+      </div>
+      <!-- desktop nav -->
+
+      <div class="mobile-nav d-lg-none">
+        <div class="custom-container container-fluid">
+          <div class="mobile-nav-top">
+            <div class="row align-items-center">
+              <div class="col-sm-4 col-3">
+                <div class="mobile-toggle">
+                  <button
+                    class="toggle"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasMobile"
+                  >
+                    <i class="fas fa-bars"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="col-sm-4 col-5">
+                <div class="mobile-logo text-center">
+                  <a href="./index.html">
+                    <img src="./assets/img/logo.png" alt="Logo" />
+                  </a>
+                </div>
+                <!-- mobile logo -->
+              </div>
+            </div>
+            <!-- row -->
+          </div>
+          <!-- mobile nav top -->
+        </div>
+        <!-- container -->
+      </div>
+      <!-- mobile nav -->
+
+      <div class="offcanvas offcanvas-start" id="offcanvasMobile">
+        <div
+          class="header-nav-right d-flex align-items-center justify-content-between"
+        >
+          <div class="cart-btn">
+            <a href="cart.html" class="btn deal-button cart-button">
+              <i class="fas fa-shopping-cart"></i>
+
+              <span
+                >سلة التسوق
+
+                <div class="item-count">3</div>
+              </span>
+            </a>
+          </div>
+          <!-- <div class="loign-btn mx-2">
+            <a class="btn deal-button theme-btn" href="login.html">
+              <i class="fas fa-user"></i>
+  
+              <span>تسجيل الدخول</span>
+            </a>
+          </div> -->
+          <div class="profile-dropdown">
+            <div
+              class="profile-trigger"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                src="assets/img/profile.png"
+                alt="Profile"
+                class="profile-avatar"
+              />
+              <span class="profile-name">مصطفى عبد الرحيم</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+
+            <div class="dropdown-menu">
+              <a href="#" class="menu-item">
+                <i class="fas fa-user"></i>
+                <span>الحساب</span>
+              </a>
+              <a href="#" class="menu-item">
+                <i class="fas fa-box"></i>
+                <span>الطلبات</span>
+              </a>
+              <a href="#" class="menu-item">
+                <i class="fas fa-heart"></i>
+                <span>المفضلة</span>
+              </a>
+              <a href="#" class="menu-item">
+                <i class="fas fa-ticket"></i>
+                <span>قسائم الشراء و الكوبونات</span>
+              </a>
+              <a href="#" class="menu-item logout">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>تسجيل خروج</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="header-search">
+          <form id="searchForm" class="search-form" action="" method="GET">
+            <input
+              type="text"
+              class="search-type"
+              id="prod_name"
+              name="search"
+              placeholder="البحث عن منتجات..."
+              value=""
+              autocomplete="on"
+            />
+            <button><i class="fas fa-search"></i></button>
+          </form>
+          <div class="autocomplete search-suggestion">
+            <div id="myInputautocomplete-list" class="autocomplete-items"></div>
+          </div>
+        </div>
+        <div class="mobile-main-menu">
+          <ul class="menu-content" id="mobileMenuContent"></ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- BreadCrumd Section -->
+    <section class="breadcrumb-area">
+      <div class="custom-container container">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">الرئيسية</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              الإلكترونيات
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- banner one -->
+    <section class="banner-ads">
+      <div class="custom-container container">
+        <img src="assets/img/ads.png" class="img-fluid img" alt="" />
+      </div>
+    </section>
+    <!-- end home main slider -->
+
+    <!-- Furniture Categories Section -->
+    <section class="categories-section py-5">
+      <div class="custom-container container">
+        <h2 class="section-title text-end mb-4">أقسام الأثاث</h2>
+
+        <div class="row g-4">
+          <!-- Living Room -->
+          <div class="col">
+            <a href="category.html" class="category-card">
+              <div class="card text-center h-100">
+                <div class="card-body">
+                  <div class="category-icon mb-3">
+                    <i class="fas fa-couch fa-3x" style="color: #8b5a2b"></i>
+                  </div>
+                  <h3 class="category-title">أثاث المعيشة</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Bedroom -->
+          <div class="col">
+            <a href="#" class="category-card">
+              <div class="card text-center h-100">
+                <div class="card-body">
+                  <div class="category-icon mb-3">
+                    <i class="fas fa-bed fa-3x" style="color: #8b5a2b"></i>
+                  </div>
+                  <h3 class="category-title">غرف النوم</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Dining -->
+          <div class="col">
+            <a href="#" class="category-card">
+              <div class="card text-center h-100">
+                <div class="card-body">
+                  <div class="category-icon mb-3">
+                    <i class="fas fa-utensils fa-3x" style="color: #8b5a2b"></i>
+                  </div>
+                  <h3 class="category-title">طاولات الطعام</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Office -->
+          <div class="col">
+            <a href="#" class="category-card">
+              <div class="card text-center h-100">
+                <div class="card-body">
+                  <div class="category-icon mb-3">
+                    <i class="fas fa-chair fa-3x" style="color: #8b5a2b"></i>
+                  </div>
+                  <h3 class="category-title">أثاث المكاتب</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Outdoor -->
+          <div class="col">
+            <a href="#" class="category-card">
+              <div class="card text-center h-100">
+                <div class="card-body">
+                  <div class="category-icon mb-3">
+                    <i
+                      class="fas fa-umbrella-beach fa-3x"
+                      style="color: #8b5a2b"
+                    ></i>
+                  </div>
+                  <h3 class="category-title">أثاث خارجي</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Kids -->
+          <div class="col">
+            <a href="#" class="category-card">
+              <div class="card text-center h-100">
+                <div class="card-body">
+                  <div class="category-icon mb-3">
+                    <i class="fas fa-child fa-3x" style="color: #8b5a2b"></i>
+                  </div>
+                  <h3 class="category-title">أثاث الأطفال</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Kitchen -->
+          <div class="col">
+            <a href="#" class="category-card">
+              <div class="card text-center h-100">
+                <div class="card-body">
+                  <div class="category-icon mb-3">
+                    <i class="fas fa-utensils fa-3x" style="color: #8b5a2b"></i>
+                  </div>
+                  <h3 class="category-title">أثاث المطبخ</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Storage -->
+          <div class="col">
+            <a href="#" class="category-card">
+              <div class="card text-center h-100">
+                <div class="card-body">
+                  <div class="category-icon mb-3">
+                    <i class="fas fa-box-open fa-3x" style="color: #8b5a2b"></i>
+                  </div>
+                  <h3 class="category-title">وحدات التخزين</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Lighting -->
+          <div class="col">
+            <a href="#" class="category-card">
+              <div class="card text-center h-100">
+                <div class="card-body">
+                  <div class="category-icon mb-3">
+                    <i
+                      class="fas fa-lightbulb fa-3x"
+                      style="color: #8b5a2b"
+                    ></i>
+                  </div>
+                  <h3 class="category-title">الإضاءة</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Decor -->
+          <div class="col">
+            <a href="#" class="category-card">
+              <div class="card text-center h-100">
+                <div class="card-body">
+                  <div class="category-icon mb-3">
+                    <i
+                      class="fas fa-paint-brush fa-3x"
+                      style="color: #8b5a2b"
+                    ></i>
+                  </div>
+                  <h3 class="category-title">الديكور</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- More Categories -->
+          <div class="col">
+            <a href="#" class="category-card">
+              <div class="card text-center h-100">
+                <div class="card-body d-flex align-items-center">
+                  <h3 class="category-title">تصنيفات أخرى</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Most Requested Furniture Products -->
+    <section class="products-section">
+      <div class="custom-container container">
+        <div class="section-header">
+          <h2 class="section-title">أحدث تشكيلة الأثاث</h2>
+          <a href="#" class="view-all">
+            عرض الكل <i class="fas fa-chevron-right"></i>
+          </a>
+        </div>
+
+        <div class="row">
+          <!-- Sofa -->
+          <div class="col">
+            <div class="product-card">
+              <div class="product-badge">وفر 15%</div>
+              <div class="wishlist-btn">
+                <i class="far fa-heart"></i>
+              </div>
+              <div class="product-image">
+                <img
+                  src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc"
+                  alt="أريكة فاخرة"
+                />
+              </div>
+              <div class="product-details">
+                <h3 class="product-title text-truncate">
+                  أريكة فاخرة من الجلد الطبيعي
+                </h3>
+                <p class="product-description">
+                  أريكة ثلاثية مقاعد من الجلد الإيطالي الفاخر
+                </p>
+                <div class="product-price">
+                  <span class="current-price">1,200,000 د.ع</span>
+                  <span class="original-price">1,400,000 د.ع</span>
+                </div>
+                <button class="add-to-cart">
+                  أضف للسلة
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+                <hr />
+                <div class="product-points">وفر 200,000 نقطة</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dining Table -->
+          <div class="col">
+            <div class="product-card">
+              <div class="product-badge">وفر 10%</div>
+              <div class="wishlist-btn">
+                <i class="far fa-heart"></i>
+              </div>
+              <div class="product-image">
+                <img
+                  src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c"
+                  alt="طاولة طعام"
+                />
+              </div>
+              <div class="product-details">
+                <h3 class="product-title text-truncate">طاولة طعام خشبية</h3>
+                <p class="product-description">
+                  طاولة طعام خشبية فاخرة لـ 8 أشخاص
+                </p>
+                <div class="product-price">
+                  <span class="current-price">850,000 د.ع</span>
+                  <span class="original-price">950,000 د.ع</span>
+                </div>
+                <button class="add-to-cart">
+                  أضف للسلة
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+                <hr />
+                <div class="product-points">وفر 100,000 نقطة</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bed -->
+          <div class="col">
+            <div class="product-card">
+              <div class="product-badge">وفر 20%</div>
+              <div class="wishlist-btn">
+                <i class="far fa-heart"></i>
+              </div>
+              <div class="product-image">
+                <img
+                  src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85"
+                  alt="سرير خشبي"
+                />
+              </div>
+              <div class="product-details">
+                <h3 class="product-title text-truncate">
+                  سرير خشبي فاخر مقاس كينج
+                </h3>
+                <p class="product-description">
+                  سرير خشب السنديان مع مراتب صحية
+                </p>
+                <div class="product-price">
+                  <span class="current-price">1,500,000 د.ع</span>
+                  <span class="original-price">1,900,000 د.ع</span>
+                </div>
+                <button class="add-to-cart">
+                  أضف للسلة
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+                <hr />
+                <div class="product-points">وفر 400,000 نقطة</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Office Chair -->
+          <div class="col">
+            <div class="product-card">
+              <div class="product-badge">وفر 12%</div>
+              <div class="wishlist-btn">
+                <i class="far fa-heart"></i>
+              </div>
+              <div class="product-image">
+                <img
+                  src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91"
+                  alt="كرسي مكتب"
+                />
+              </div>
+              <div class="product-details">
+                <h3 class="product-title text-truncate">كرسي مكتب إرغونوميك</h3>
+                <p class="product-description">
+                  كرسي مكتب مريح مع دعم للظهر والرقبة
+                </p>
+                <div class="product-price">
+                  <span class="current-price">350,000 د.ع</span>
+                  <span class="original-price">400,000 د.ع</span>
+                </div>
+                <button class="add-to-cart">
+                  أضف للسلة
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+                <hr />
+                <div class="product-points">وفر 50,000 نقطة</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Wardrobe -->
+          <div class="col">
+            <div class="product-card">
+              <div class="product-badge">وفر 18%</div>
+              <div class="wishlist-btn">
+                <i class="far fa-heart"></i>
+              </div>
+              <div class="product-image">
+                <img
+                  src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a"
+                  alt="خزانة ملابس"
+                />
+              </div>
+              <div class="product-details">
+                <h3 class="product-title text-truncate">
+                  خزانة ملابس خشبية كبيرة
+                </h3>
+                <p class="product-description">
+                  خزانة ملابس بثلاثة أبواب ومرآة كبيرة
+                </p>
+                <div class="product-price">
+                  <span class="current-price">1,100,000 د.ع</span>
+                  <span class="original-price">1,350,000 د.ع</span>
+                </div>
+                <button class="add-to-cart">
+                  أضف للسلة
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+                <hr />
+                <div class="product-points">وفر 250,000 نقطة</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Furniture Brands Section -->
+    <section class="brands-section">
+      <div class="custom-container container">
+        <div class="section-header">
+          <h2 class="section-title">أشهر ماركات الأثاث</h2>
+          <a href="#" class="view-all">
+            عرض الكل <i class="fas fa-chevron-right"></i>
+          </a>
+        </div>
+
+        <div class="row g-4">
+          <div class="col">
+            <a href="#" class="brand-item">
+              <img
+                src="https://via.placeholder.com/150x80?text=IKEA"
+                alt="IKEA"
+              />
+            </a>
+          </div>
+          <div class="col">
+            <a href="#" class="brand-item">
+              <img
+                src="https://via.placeholder.com/150x80?text=Ashley"
+                alt="Ashley"
+              />
+            </a>
+          </div>
+          <div class="col">
+            <a href="#" class="brand-item">
+              <img
+                src="https://via.placeholder.com/150x80?text=Ethan+Allen"
+                alt="Ethan Allen"
+              />
+            </a>
+          </div>
+          <div class="col">
+            <a href="#" class="brand-item">
+              <img
+                src="https://via.placeholder.com/150x80?text=La-Z-Boy"
+                alt="La-Z-Boy"
+              />
+            </a>
+          </div>
+          <div class="col">
+            <a href="#" class="brand-item">
+              <img
+                src="https://via.placeholder.com/150x80?text=Raymour"
+                alt="Raymour"
+              />
+            </a>
+          </div>
+          <div class="col">
+            <a href="#" class="brand-item">
+              <img
+                src="https://via.placeholder.com/150x80?text=Herman+Miller"
+                alt="Herman Miller"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Furniture Offers Section -->
+    <section class="products-section">
+      <div class="custom-container container">
+        <div class="section-header">
+          <h2 class="section-title">أقوى عروض الأثاث</h2>
+          <a href="#" class="view-all">
+            عرض الكل <i class="fas fa-chevron-right"></i>
+          </a>
+        </div>
+
+        <div class="row">
+          <!-- Coffee Table -->
+          <div class="col">
+            <div class="product-card">
+              <div class="product-badge">وفر 25%</div>
+              <div class="wishlist-btn">
+                <i class="far fa-heart"></i>
+              </div>
+              <div class="product-image">
+                <img
+                  src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6"
+                  alt="طاولة قهوة"
+                />
+              </div>
+              <div class="product-details">
+                <h3 class="product-title text-truncate">
+                  طاولة قهوة خشبية دائرية
+                </h3>
+                <p class="product-description">
+                  طاولة قهوة من خشب السنديان مع تفاصيل نحاسية
+                </p>
+                <div class="product-price">
+                  <span class="current-price">450,000 د.ع</span>
+                  <span class="original-price">600,000 د.ع</span>
+                </div>
+                <button class="add-to-cart">
+                  أضف للسلة
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+                <hr />
+                <div class="product-points">وفر 150,000 نقطة</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bookshelf -->
+          <div class="col">
+            <div class="product-card">
+              <div class="product-badge">وفر 30%</div>
+              <div class="wishlist-btn">
+                <i class="far fa-heart"></i>
+              </div>
+              <div class="product-image">
+                <img
+                  src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2"
+                  alt="رف كتب"
+                />
+              </div>
+              <div class="product-details">
+                <h3 class="product-title text-truncate">رف كتب خشبي كبير</h3>
+                <p class="product-description">
+                  رف كتب بخمسة أرفف من الخشب الصلب
+                </p>
+                <div class="product-price">
+                  <span class="current-price">320,000 د.ع</span>
+                  <span class="original-price">460,000 د.ع</span>
+                </div>
+                <button class="add-to-cart">
+                  أضف للسلة
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+                <hr />
+                <div class="product-points">وفر 140,000 نقطة</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TV Stand -->
+          <div class="col">
+            <div class="product-card">
+              <div class="product-badge">وفر 15%</div>
+              <div class="wishlist-btn">
+                <i class="far fa-heart"></i>
+              </div>
+              <div class="product-image">
+                <img
+                  src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91"
+                  alt="حامل تلفزيون"
+                />
+              </div>
+              <div class="product-details">
+                <h3 class="product-title text-truncate">
+                  حامل تلفزيون خشبي عصري
+                </h3>
+                <p class="product-description">
+                  حامل تلفزيون بخزانتين وخشب السنديان
+                </p>
+                <div class="product-price">
+                  <span class="current-price">380,000 د.ع</span>
+                  <span class="original-price">450,000 د.ع</span>
+                </div>
+                <button class="add-to-cart">
+                  أضف للسلة
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+                <hr />
+                <div class="product-points">وفر 70,000 نقطة</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Outdoor Set -->
+          <div class="col">
+            <div class="product-card">
+              <div class="product-badge">وفر 22%</div>
+              <div class="wishlist-btn">
+                <i class="far fa-heart"></i>
+              </div>
+              <div class="product-image">
+                <img
+                  src="https://images.unsplash.com/photo-1565538810643-b5bdb714032a"
+                  alt="طقم حديقة"
+                />
+              </div>
+              <div class="product-details">
+                <h3 class="product-title text-truncate">طقم حديقة خشبي</h3>
+                <p class="product-description">
+                  طقم حديقة خشبي مقاوم للعوامل الجوية
+                </p>
+                <div class="product-price">
+                  <span class="current-price">1,250,000 د.ع</span>
+                  <span class="original-price">1,600,000 د.ع</span>
+                </div>
+                <button class="add-to-cart">
+                  أضف للسلة
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+                <hr />
+                <div class="product-points">وفر 350,000 نقطة</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kids Bed -->
+          <div class="col">
+            <div class="product-card">
+              <div class="product-badge">وفر 20%</div>
+              <div class="wishlist-btn">
+                <i class="far fa-heart"></i>
+              </div>
+              <div class="product-image">
+                <img
+                  src="https://images.unsplash.com/photo-1566669437689-9e5d1448a1e8"
+                  alt="سرير أطفال"
+                />
+              </div>
+              <div class="product-details">
+                <h3 class="product-title text-truncate">
+                  سرير أطفال خشبي على شكل سيارة
+                </h3>
+                <p class="product-description">
+                  سرير أطفال بتصميم مميز ومساند جانبية
+                </p>
+                <div class="product-price">
+                  <span class="current-price">650,000 د.ع</span>
+                  <span class="original-price">820,000 د.ع</span>
+                </div>
+                <button class="add-to-cart">
+                  أضف للسلة
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+                <hr />
+                <div class="product-points">وفر 170,000 نقطة</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Furniture Slider -->
+    <div class="wrapper">
+      <div class="custom-container container my-5">
+        <div class="main-slider swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="slide-content">
+                <div class="circle-decoration circle-1"></div>
+                <div class="circle-decoration circle-2"></div>
+                <div class="circle-decoration circle-3"></div>
+                <div class="circle-decoration circle-4"></div>
+
+                <img
+                  src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6"
+                  alt="طاولة قهوة"
+                  class="product-image"
+                />
+                <div class="slide-text">
+                  <p class="h6 mb-3">أحدث تشكيلة الCozy Home</p>
+                  <h1 class="display-4 fw-bold mb-4">طاولة قهوة خشبية فاخرة</h1>
+                  <div class="discount-badge">خصم يصل إلى 30%</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slide-content">
+                <div class="circle-decoration circle-1"></div>
+                <div class="circle-decoration circle-2"></div>
+                <div class="circle-decoration circle-3"></div>
+                <div class="circle-decoration circle-4"></div>
+
+                <img
+                  src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a"
+                  alt="خزانة ملابس"
+                  class="product-image"
+                />
+                <div class="slide-text">
+                  <p class="h6 mb-3">أثاث خشبي عالي الجودة</p>
+                  <h1 class="display-4 fw-bold mb-4">خزانة ملابس فاخرة</h1>
+                  <div class="discount-badge">خصم يصل إلى 25%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <!-- Footer Section -->
+    <footer class="site-footer">
+      <div class="custom-container container">
+        <div class="row">
+          <!-- Newsletter Section -->
+          <div class="col-lg-3">
+            <div class="footer-section">
+              <div class="footer-logo mb-4">
+                <img
+                  src="./assets/img/logo.png"
+                  alt="متجر الأثاث"
+                  class="img-fluid"
+                />
+              </div>
+              <div class="social-links mb-4">
+                <a href="#" class="social-link"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" class="social-link"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" class="social-link"
+                  ><i class="fab fa-whatsapp"></i
+                ></a>
+                <a href="#" class="social-link"
+                  ><i class="fab fa-snapchat-ghost"></i
+                ></a>
+              </div>
+              <h4 class="newsletter-title">اشترك لتصلك أحدث عروض الأثاث</h4>
+              <form class="newsletter-form">
+                <div class="input-group">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="البريد الإلكتروني"
+                  />
+                  <button type="submit" class="btn btn-submit">
+                    <i class="fas fa-arrow-left"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- Popular Categories Section -->
+          <div class="col-lg-3 mb-4 mb-lg-0">
+            <div class="footer-section">
+              <h3 class="footer-title">أقسام الأثاث</h3>
+              <ul class="footer-links">
+                <li><a href="#">أثاث المعيشة</a></li>
+                <li><a href="#">غرف النوم</a></li>
+                <li><a href="#">طاولات الطعام</a></li>
+                <li><a href="#">أثاث المكاتب</a></li>
+                <li><a href="#">أثاث خارجي</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- Popular Brands Section -->
+          <div class="col-lg-3 mb-4 mb-lg-0">
+            <div class="footer-section">
+              <h3 class="footer-title">ماركات الأثاث</h3>
+              <ul class="footer-links">
+                <li><a href="#">IKEA</a></li>
+                <li><a href="#">Ashley</a></li>
+                <li><a href="#">Ethan Allen</a></li>
+                <li><a href="#">La-Z-Boy</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Download Apps Section -->
+          <div class="col-lg-3 mb-4 mb-lg-0">
+            <div class="footer-section">
+              <h3 class="footer-title">حمل تطبيقنا</h3>
+              <div class="app-buttons">
+                <a href="#" class="app-button google-play">
+                  <img
+                    src="assets/img/icons/googleplay.png"
+                    alt="Google Play"
+                  />
+                  <span>Google Play</span>
+                </a>
+                <a href="#" class="app-button app-store">
+                  <img src="assets/img/icons/app-store.png" alt="App Store" />
+                  <span>App Store</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="footer-bottom">
+          <div class="row">
+            <div class="col-12 text-center">
+              <p class="copyright">
+                © 2025 جميع الحقوق محفوظة - متجر الCozy Home
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js"
+      integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+      integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/3.0.0-rc3/lazysizes.min.js"
+      integrity="sha512-HMnm5Dp1stoEycrUKuMyGDHIudidstU6uRwRgRxPbl2jNxU9xS2B0XLon7xowk3ZitrjNw7WIbQwXroIwY33sw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"
+      integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
